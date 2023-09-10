@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1 id="name" style ="text-align: center;"></h1>
+        <script>
+            let xhr = new XMLHttpRequest();
+            xhr.open("GET", "/api/name", true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    let name = xhr.responseText;
+                    document.getElementById("name").innerText = name;
+                }
+            };
+            xhr.send();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $.ajax({
+                    url: "http://localhost:5000/api/name",
+                    method: "GET",
+                    success: function (name) {
+                        $("#name").text(name);
+                    },
+                    error: function (error) {
+                        console.error("Error:", error);
+                    },
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1 id="name" style="text-align: center;"></h1>
+    </body>
+</html>

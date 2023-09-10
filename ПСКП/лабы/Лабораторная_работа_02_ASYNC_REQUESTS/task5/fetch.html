@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h1 id="name" style ="text-align: center;"></h1>
+        <script>
+            fetch('/api/name').then(response => response.text()).then(name => {
+                document.getElementById('name').innerText = name;
+            })
+        </script>
+    </body>
+</html>

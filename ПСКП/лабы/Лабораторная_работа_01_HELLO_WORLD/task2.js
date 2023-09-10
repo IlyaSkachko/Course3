@@ -1,29 +1,4 @@
 
-// const http = require("http");
-
-// http.createServer(function(request, response){
-
-//     response.end(
-//         `
-//         <html>
-//             <head>
-//                 <title>Request content</title>
-//             </head>
-//             <body>
-//                 <h1 style="text-align:center">Output: </h1>
-//                 <p style="text-align:center">URI: ${request.url}</p>
-//                 <p style="text-align:center">Method: ${request.method}</p>
-//                 <p style="text-align:center">Protocol version: ${request.httpVersion}</p>
-//                 <p style="text-align:center">Headers: ${JSON.stringify(request.headers)}</p>
-//                 <p style="text-align:center">Body: ${request.JSON}</p>
-//             </body>
-//         </html>
-//         `
-//     );
-// }).listen(3000);
-
-
-
 const http = require("http");
 
 http.createServer(function(request, response) {
@@ -60,3 +35,4 @@ http.createServer(function(request, response) {
             `
     ))
 }).listen(3000);
+
