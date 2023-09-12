@@ -1,0 +1,72 @@
+
+create table SIA_t(
+    x number(3) primary key, 
+    s varchar2(50)
+);
+
+commit;
+ -- task11
+ 
+insert into SIA_t (x, s) values ( 1, 'a');
+insert into SIA_t (x, s) values ( 2, 'b');
+insert into SIA_t (x, s) values ( 3, 'c');
+
+insert into SIA_t (x, s) values ( 7, 'abc');
+commit;
+
+-- task12
+update SIA_t set x = 5, s = 'd' where x = 2;
+update SIA_t set x = 10, s = 'hello' where x = 3;
+
+commit;
+
+
+
+-- task13
+select * from SIA_t where x > 2;
+
+select sum(x) as sum_x from SIA_t;
+select count(*) as count from SIA_t;
+select max(x) as max_x from SIA_t;
+
+
+-- task14
+
+delete from SIA_t where x = 1;
+
+commit;
+
+-- task15
+
+create table SIA_t1 (
+    id number primary key,
+    x number(3) references SIA_t(x),
+    s varchar2(50)
+    -- constraint x foreign key (x) references SIA_t(x)
+);
+
+commit;
+
+insert into SIA_t1 (id, x, s) values (1, 5, 'point1');
+insert into SIA_t1 (id, x, s) values (2, 10, 'point2');
+insert into SIA_t1 (id, x, s) values (3, 7, 'abc');
+
+commit;
+
+
+-- task16
+
+select * from SIA_t1 left join SIA_t on SIA_t1.s = SIA_t.s;
+
+select * from SIA_t1 right join SIA_t on SIA_t1.s = SIA_t.s;
+
+select * from SIA_t1 inner join SIA_t on SIA_t1.s = SIA_t.s;
+
+select * from SIA_t1;
+
+select * from SIA_t;
+
+-- task 18
+drop table SIA_t;
+drop table SIA_t1;
+commit;
