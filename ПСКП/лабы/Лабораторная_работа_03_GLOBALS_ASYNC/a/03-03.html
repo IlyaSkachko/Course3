@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div id="results"></div>
+<script>
+    function displayResult(result, index) {
+        let div = document.createElement('div');
+        div.textContent = index + ". Результат: " + result;
+        document.getElementById('results').appendChild(div);
+    }
+
+    async function fetchResults() {
+        let start = new Date().getTime();
+        for (let x = 0; x <= 20; x++) {
+            let response = await fetch('http://localhost:3000/fact?k=' + x);
+            let data = await response.json();
+            let fact = data.fact;
+            let timeElapsed = new Date().getTime() - start;
+            let resultText = timeElapsed + "-" + x + "/" + fact;
+            let div = document.createElement('div');
+            div.textContent = x + ". Результат: " + resultText;
+            document.getElementById('results').appendChild(div);
+        }
+    }
+
+    fetchResults();
+</script>
+</body>
+</html>
