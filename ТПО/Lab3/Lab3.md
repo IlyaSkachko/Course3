@@ -17,7 +17,7 @@
 </ul><br>
 <strong>Ожидаемый результат: </strong>появление уведомления об успешной регистрации.<br>
 <strong>Результаты: </strong>успешная регистрация<br>
-<img width="200" height="400" src="registration.jpg"/><br>
+<img width="300" height="400" src="registration.jpg"/><br>
 <strong>Статус выполнения: </strong>выполнен успешно<br>
 <hr>
 
@@ -32,5 +32,5 @@
 </ul><br>
 <strong>Ожидаемый результат: </strong>товар добавился в раздел "Закладки"<br>
 <strong>Результаты: </strong>автомобиль добавлен в закладки<br>
-<img width="500" height="200" src="mark.jpg"/><br>
+<img width="500" height="250" src="mark.jpg"/><br>
 <strong>Статус выполнения: </strong>выполнен успешно<br>
