@@ -24,7 +24,7 @@ http.createServer(function(request, response) {
         }
     }
     else {
-        response.end("http://localhost:5000/fact?k=3")
+        response.end("http://localhost:3000/fact?k=3")
     }
 
 }).listen(3000);

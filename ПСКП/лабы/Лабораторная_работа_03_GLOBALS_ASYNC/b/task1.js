@@ -6,13 +6,13 @@ function firstJob() {
     });
 }
 
-firstJob()
+firstJob() 
     .then((result) => {
         console.log(result);
     })
     .catch((error) => {
         console.error(error);
-    });
+    }); 
 
 
 async function firstJobAsync() {
