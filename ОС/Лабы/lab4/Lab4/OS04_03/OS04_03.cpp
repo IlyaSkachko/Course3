@@ -39,16 +39,16 @@ int main() {
         std::cout << "\n" << i << ". Main PID: " << processId << std::endl;
 
   
-        if (i == 20) {
-            SuspendThread(thread1.native_handle()); //return descriptor of socket and then this thread will stop
+        if (i == 5) {
+            SuspendThread(thread1.native_handle()); 
         }
 
   
-        if (i == 40) {
+        if (i == 8) {
             SuspendThread(thread2.native_handle());
         }
 
-        if (i == 60) {
+        if (i == 12) {
             ResumeThread(thread1.native_handle());
         }
 

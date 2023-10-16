@@ -1,7 +1,9 @@
 ﻿#include <iostream>
 #include <Windows.h>
 
-void long_running_function()
+
+
+int main()
 {
     while (true)
     {
@@ -13,12 +15,6 @@ void long_running_function()
         // Длинная операция
         Sleep(1000);
     }
-}
-
-int main()
-{
-    long_running_function();
-
 
     return 0;
 }

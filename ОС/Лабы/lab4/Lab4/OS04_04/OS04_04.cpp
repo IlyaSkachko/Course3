@@ -8,7 +8,7 @@ DWORD WINAPI OS04_03_T1()
 {
     for (int i = 0; i < 50; i++)
     {
-        if (i == 25)
+        if (i == 8)
         {
             Sleep(10000);
         }
@@ -24,7 +24,7 @@ DWORD WINAPI OS04_03_T2()
 {
     for (int i = 0; i < 125; i++)
     {
-        if (i == 80)
+        if (i == 12)
         {
             Sleep(15000);
         }
@@ -50,7 +50,7 @@ int main() {
 
 
         
-        if (i == 30)
+        if (i == 5)
         {
             Sleep(10000);
         }

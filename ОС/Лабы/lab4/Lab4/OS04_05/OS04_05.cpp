@@ -46,7 +46,7 @@ int main() {
         std::cout << "\n" << i << ". Main PID: " << processId << std::endl;
 
 
-        if (i == 20)
+        if (i == 4)
         {
             flag = true;
         }
