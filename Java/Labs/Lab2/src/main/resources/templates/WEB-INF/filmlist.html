@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Film list</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <h1>Film list</h1>
+    <h2><a href="addfilm">Add new film</a></h2>
+    <h2><a href="removefilm">Remove film</a></h2>
+    <h2><a href="editfilm">Edit film</a></h2>
+    <br>
+    <div class="container">
+        <table class="container" border="1">
+            <tr>
+                <th>
+                    <h1>Title</h1>
+                </th>
+                <th>
+                    <h1>Description</h1>
+                </th>
+            </tr>
+            <tr th:each="film: ${films}">
+                <td th:utext="${film.title}">...</td>
+                <td th:utext="${film.description}">...</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
