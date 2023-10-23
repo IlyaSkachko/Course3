@@ -14,7 +14,10 @@ class DB extends EventEmmiter {
     }
 
     async insert(object) {
-        db_data.push(object);
+        const index = db_data.findIndex(item => item.id === Number.parseInt(object.id));
+        if (index === -1) {
+            db_data.push(object);
+        }
     }
 
     async update(object) {
@@ -25,6 +28,10 @@ class DB extends EventEmmiter {
     }
 
     async delete(id) {
+        const index = db_data.findIndex(item => item.id === Number.parseInt(id));
+        if (index === -1) {
+            return;
+        }
         db_data = db_data.filter(item => item.id !== Number.parseInt(id));
         return db_data;
     }
