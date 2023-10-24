@@ -172,6 +172,7 @@ const server = http
                 });
             }
             if (path === "/json") {
+                let data = "";
                 request.on("end", () => {
                     try {
                         const requestData = JSON.parse(data);
