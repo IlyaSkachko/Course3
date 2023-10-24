@@ -1,4 +1,4 @@
-# (01.10.2023)
+# Test Cases
 ## Автомобильный сайт [av.by](https://av.by/)
 
 <strong>Test-case №1</strong>. Регистрация на сайте.<br>
