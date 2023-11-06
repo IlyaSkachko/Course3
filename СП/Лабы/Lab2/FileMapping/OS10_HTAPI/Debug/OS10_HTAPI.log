@@ -1,0 +1,7 @@
+﻿  pch.cpp
+  Element.cpp
+  HT.cpp
+  OS10_HTAPI.cpp
+  Создание кода...
+D:\studing\5_semestr\system_programing\labs\lab_2\FileMapping\OS10_HTAPI\HT.cpp(488): warning C4715: HT::open: значение возвращается не при всех путях выполнения
+  OS10_HTAPI.vcxproj -> D:\studing\5_semestr\system_programing\labs\lab_2\FileMapping\Debug\OS10_HTAPI.lib
