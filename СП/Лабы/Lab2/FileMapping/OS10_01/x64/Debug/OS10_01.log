@@ -1,6 +1,2 @@
-﻿  Element.cpp
-  HT.cpp
-  main.cpp
-C:\Users\ilyas\OneDrive\UNIVER\СП\Лабы\Lab2\FileMapping\OS10_01\main.cpp(7,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
-  Создание кода...
-  OS10_01.vcxproj -> C:\Users\ilyas\OneDrive\UNIVER\СП\Лабы\Lab2\FileMapping\x64\Debug\OS10_01.exe
+﻿  HT.cpp
+  OS10_01.vcxproj -> D:\UNIVER\Course3\СП\Лабы\Lab2\FileMapping\x64\Debug\OS10_01.exe

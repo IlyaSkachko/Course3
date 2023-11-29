@@ -15,7 +15,6 @@ namespace HT
 		this->addr = NULL;
 		ZeroMemory(this->lastErrorMessage, sizeof(this->lastErrorMessage));
 		this->lastSnaptime = 0;
-
 		this->count = 0;
 	}
 

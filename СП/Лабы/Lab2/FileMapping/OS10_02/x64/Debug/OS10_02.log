@@ -1,1 +1,3 @@
-﻿  OS10_02.vcxproj -> C:\Users\ilyas\OneDrive\UNIVER\СП\Лабы\Lab2\FileMapping\x64\Debug\OS10_02.exe
+﻿  OS10_02.cpp
+D:\UNIVER\Course3\СП\Лабы\Lab2\FileMapping\OS10_02\OS10_02.cpp(14,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+  OS10_02.vcxproj -> D:\UNIVER\Course3\СП\Лабы\Lab2\FileMapping\x64\Debug\OS10_02.exe

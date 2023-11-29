@@ -5,7 +5,7 @@ namespace tests
 	BOOL test1(HT::HtHandle* ht)
 	{
 
-		if (!HT::insert(ht, new HT::Element("newKey", 3, "data", 5)))
+		if (!HT::insert(ht, new HT::Element("newKey", 7, "data", 5)))
 		{
 			if (strcmp("error: so long key", HT::getLastError(ht)) == 0)
 			{
@@ -18,7 +18,7 @@ namespace tests
 	BOOL test2(HT::HtHandle* ht)
 	{
 
-		if (!HT::insert(ht, new HT::Element("newKey", 7, "dataFile", 3)))
+		if (!HT::insert(ht, new HT::Element("newKe", 7, "dataFile", 9)))
 		{
 			if (strcmp("error: so long payload", HT::getLastError(ht)) == 0)
 			{
@@ -26,6 +26,7 @@ namespace tests
 			}
 		}
 		return false;
+
 	}
 
 	BOOL test3(HT::HtHandle* ht)
@@ -45,21 +46,6 @@ namespace tests
 	{
 
 		HT::Element* element = new HT::Element("test2", 6, "dataInfo", 9);
-		HT::insert(ht, element);
-		if (!HT::insert(ht, element))
-		{
-			if (strcmp("error: file is already insert", HT::getLastError(ht)) == 0)
-			{
-				return true;
-			}
-		}
-		return false;
-	}
-
-	BOOL test5(HT::HtHandle* ht)
-	{
-		HT::Element* element = new HT::Element("test2", 6, "dataInfo", 9);
-		HT::insert(ht, element);
 		HT::remove(ht, element);
 		if (!HT::remove(ht, element))
 		{
@@ -69,5 +55,17 @@ namespace tests
 			}
 		}
 		return false;
+	}
+
+	BOOL test5(HT::HtHandle* ht)
+	{
+		HT::Element* element = new HT::Element("test2", 6, "test2", 6);
+
+		HT::insert(ht, element);
+		HT::remove(ht, element);
+		if (HT::get(ht, element) != NULL)
+			return false;
+
+		return true;
 	}
 }

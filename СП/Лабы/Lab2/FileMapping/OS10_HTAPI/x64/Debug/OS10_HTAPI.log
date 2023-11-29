@@ -1,7 +1,3 @@
-﻿  pch.cpp
-  Element.cpp
-  HT.cpp
-  OS10_HTAPI.cpp
-  Создание кода...
-C:\Users\ilyas\OneDrive\UNIVER\СП\Лабы\Lab2\FileMapping\OS10_HTAPI\HT.cpp(509): warning C4715: HT::open: значение возвращается не при всех путях выполнения
-  OS10_HTAPI.vcxproj -> C:\Users\ilyas\OneDrive\UNIVER\СП\Лабы\Lab2\FileMapping\x64\Debug\OS10_HTAPI.lib
+﻿  HT.cpp
+D:\UNIVER\Course3\СП\Лабы\Lab2\FileMapping\OS10_HTAPI\HT.cpp(509): warning C4715: HT::open: значение возвращается не при всех путях выполнения
+  OS10_HTAPI.vcxproj -> D:\UNIVER\Course3\СП\Лабы\Lab2\FileMapping\x64\Debug\OS10_HTAPI.lib
