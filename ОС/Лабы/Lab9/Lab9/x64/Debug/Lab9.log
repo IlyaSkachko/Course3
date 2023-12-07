@@ -1,0 +1,4 @@
+﻿  OS09_01.cpp
+D:\UNIVER\Course3\ОС\Лабы\Lab9\Lab9\OS09_01.cpp(47): warning C4715: printFileTxt: значение возвращается не при всех путях выполнения
+D:\UNIVER\Course3\ОС\Лабы\Lab9\Lab9\OS09_01.cpp(87): warning C4715: printFileInfo: значение возвращается не при всех путях выполнения
+  Lab9.vcxproj -> D:\UNIVER\Course3\ОС\Лабы\Lab9\x64\Debug\OS09_01.exe

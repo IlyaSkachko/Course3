@@ -1,3 +1,2 @@
 ﻿  OS08_03.cpp
-D:\UNIVER\Course3\ОС\Лабы\Lab8\OS08_03\OS08_03.cpp(62,30): warning C4312: reinterpret_cast: преобразование из "int" в "unsigned char *" большего размера
   OS08_03.vcxproj -> D:\UNIVER\Course3\ОС\Лабы\Lab8\x64\Debug\OS08_03.exe
