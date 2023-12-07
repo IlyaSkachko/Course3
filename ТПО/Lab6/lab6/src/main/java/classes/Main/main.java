@@ -1,16 +1,6 @@
 package classes.Main;
 
-import classes.*;
-import classes.Abiturient;
-import classes.Book;
-import classes.Car;
-import classes.Customer;
-import classes.House;
-import classes.Patient;
-import classes.Phone;
-import classes.Product;
-import classes.Student;
-import classes.Train;
+import classes.classes.*;
 
 import java.sql.Time;
 import java.util.Scanner;
@@ -18,8 +8,8 @@ import java.util.Scanner;
 public class main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Выюерите пункт: \n 1 - Student \n 2 - Customer \n 3 - Patient \n" +
-                " 4 - Abiturient \n 5 - Book \n 6 - Book \n 7 - Phone \n 8 - Car \n 9 - Product \n 10 - Train \n 0 - Выход");
+        System.out.println("Выберите пункт: \n 1 - Student \n 2 - Customer \n 3 - Patient \n" +
+                " 4 - Abiturient \n 5 - Book \n 6 - House \n 7 - Phone \n 8 - Car \n 9 - Product \n 10 - Train \n 0 - Выход");
         int num = in.nextInt();
         while (true)
         {
@@ -49,7 +39,7 @@ public class main {
                 }
                 case 2:
                 {
-                    classes.Customer[] customers = Customer.getArrCustomer();
+                    Customer[] customers = Customer.getArrCustomer();
 
                     for (var item:
                             customers) {

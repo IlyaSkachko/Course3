@@ -1,4 +1,4 @@
-package classes;
+package classes.classes;
 
 import java.util.ArrayList;
 import java.util.Dictionary;
@@ -153,10 +153,10 @@ public class Abiturient {
                 }
             }
         }
-        System.out.println(count+" абитуриентов с max баллом");
+        System.out.println(count+" пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ max пїЅпїЅпїЅпїЅпїЅпїЅ");
         for(var i = 0; i < count; i++)
             System.out.println(abiturients[i].toString());
-        System.out.println(" полный список абитуриентов, имеющих полупроходную сумму");
+        System.out.println(" пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ");
         int ball = 0;
         for (var item:
              abiturients[count].marks) {

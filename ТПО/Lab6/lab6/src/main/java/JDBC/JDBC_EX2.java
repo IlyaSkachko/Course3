@@ -11,7 +11,7 @@ public class JDBC_EX2 {
         String url1 = "jdbc:mysql://localhost:3306/rus_bel";
         String url2 = "jdbc:mysql://localhost:3306/bel_rus";
         String username = "root";
-        String password = "Kravchenko1";
+        String password = "Skachko1";
 
         try (Connection rusBel = DriverManager.getConnection(url1, username, password)) {
             try(Connection belRus = DriverManager.getConnection(url2, username, password)) {

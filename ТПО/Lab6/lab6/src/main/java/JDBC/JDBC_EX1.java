@@ -18,7 +18,7 @@ public class JDBC_EX1
         Class.forName("com.mysql.cj.jdbc.Driver");
         String url = "jdbc:mysql://localhost:3306/dictionaryDatabase";
         String username = "root";
-        String password = "Kravchenko1";
+        String password = "Skachko1";
 
         try (Connection connection = DriverManager.getConnection(url, username, password)) {
             System.out.println("We're connected");
