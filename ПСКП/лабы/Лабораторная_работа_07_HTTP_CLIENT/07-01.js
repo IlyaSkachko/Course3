@@ -1,7 +1,5 @@
 
 
-const url = require("url");
-const querystring = require("querystring");
 const http = require("http");
 
 const options = {

@@ -1,50 +1,50 @@
-const fs = require('fs');
-const http = require('http');
+const fs = require("fs");
+const http = require("http");
 
-const fileStream = fs.createReadStream('MyFile.png');
+const fileStream = fs.createReadStream("MyFile.png");
 
 const options = {
-    hostname: 'localhost',
+    hostname: "localhost",
     port: 3000,
-    path: '/upload',
-    method: 'POST',
+    path: "/upload",
+    method: "POST",
     headers: {
-        'Content-Type': 'multipart/form-data',
+        "Content-Type": "multipart/form-data",
     }
 };
 
-const req = http.request(options, (res) => {
-    let data = '';
+const request = http.request(options, (response) => {
+    let data = "";
 
-    res.on('data', (chunk) => {
+    response.on("data", (chunk) => {
         data += chunk;
     });
 
-    res.on('end', () => {
-        console.log(`Статус ответа: ${res.statusCode}`);
+    response.on("end", () => {
+        console.log(`Статус ответа: ${response.statusCode}`);
         console.log(`Ответ: ${data}`);
     });
 });
 
 
-fileStream.pipe(req);
+fileStream.pipe(request);
 
 
-http.createServer((req, res) => {
-    if (req.url === '/upload' && req.method === 'POST') {
-        const fileStream = fs.createWriteStream('MyFile1.png');
+http.createServer((request, response) => {
+    if (request.url === "/upload" && request.method === "POST") {
+        const fileStream = fs.createWriteStream("MyFileCopy.png");
 
-        req.on('data', (chunk) => {
+        request.on("data", (chunk) => {
             fileStream.write(chunk);
         });
 
-        req.on('end', () => {
+        request.on("end", () => {
             fileStream.end();
-            res.writeHead(200, { 'Content-Type': 'text/plain' });
-            res.end('All load!');
+            response.writeHead(200, { "Content-Type": "text/plain" });
+            response.end("All load!");
         });
     } else {
-        res.writeHead(404, { 'Content-Type': 'text/plain' });
-        res.end('Страница не найдена');
+        response.writeHead(404, { "Content-Type": "text/plain" });
+        response.end("Страница не найдена");
     }
 }).listen(3000);

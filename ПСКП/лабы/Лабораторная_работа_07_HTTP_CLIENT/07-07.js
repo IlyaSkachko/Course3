@@ -1,46 +1,46 @@
-const fs = require('fs');
-const http = require('http');
+const fs = require("fs");
+const http = require("http");
 
 const options = {
-    hostname: 'localhost',
+    hostname: "localhost",
     port: 3000,
-    path: '/getFile',
-    method: 'GET'
+    path: "/getFile",
+    method: "GET"
 };
 
-const req = http.request(options, (res) => {
-    const fileStream = fs.createWriteStream('ReceivedFile.png');
+const request = http.request(options, (response) => {
+    const fileStream = fs.createWriteStream("Cat.png");
 
-    res.pipe(fileStream);
+    response.pipe(fileStream);
 
-    fileStream.on('finish', () => {
-        console.log('Файл успешно сохранен');
+    fileStream.on("finish", () => {
+        console.log("Файл успешно сохранен");
     });
 });
 
-req.on('error', (e) => {
+request.on("error", (e) => {
     console.error(`Ошибка при отправке запроса: ${e.message}`);
 });
 
-req.end();
+request.end();
 
 
-const server = http.createServer((req, res) => {
-    if (req.url === '/getFile' && req.method === 'GET') {
-        const fileStream = fs.createReadStream('MyFile.png');
+const server = http.createServer((request, response) => {
+    if (request.url === "/getFile" && request.method === "GET") {
+        const fileStream = fs.createReadStream("MyFile.png");
 
-        fileStream.on('open', () => {
-            res.setHeader('Content-Type', 'image/png');
-            fileStream.pipe(res);
+        fileStream.on("open", () => {
+            response.setHeader("Content-Type", "image/png");
+            fileStream.pipe(response);
         });
 
-        fileStream.on('error', (err) => {
-            console.error('Ошибка при чтении файла:', err);
-            res.writeHead(500, { 'Content-Type': 'text/plain' });
-            res.end('Internal Server Error');
+        fileStream.on("error", (err) => {
+            console.error("Ошибка при чтении файла:", err);
+            response.writeHead(500, { "Content-Type": "text/plain" });
+            response.end("Internal Server Error");
         });
     } else {
-        res.writeHead(404, { 'Content-Type': 'text/plain' });
-        res.end('Страница не найдена');
+        response.writeHead(404, { "Content-Type": "text/plain" });
+        response.end("Страница не найдена");
     }
 }).listen(3000);

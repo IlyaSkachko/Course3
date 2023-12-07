@@ -39,14 +39,14 @@ request.end();
 
 
 http.createServer((request, response) => {
-    if (request.method === 'POST') {
+    if (request.method === "POST") {
 
-        let body = '';
-        request.on('data', chunk => {
+        let body = "";
+        request.on("data", chunk => {
             body += chunk;
         });
 
-        request.on('end', () => {
+        request.on("end", () => {
             const requestData = JSON.parse(body);
             const comment = requestData._comment;
             const x = Number.parseInt(requestData.x);
@@ -55,7 +55,7 @@ http.createServer((request, response) => {
             const o = requestData.o;
             const m = requestData.m;
 
-            response.writeHead(200, { 'Content-Type': 'text/plain' });
+            response.writeHead(200, { "Content-Type": "text/plain" });
             const res = {
                 "__comment": "Ответ: " + comment,
                 "x:" : x,
